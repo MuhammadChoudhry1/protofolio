@@ -20,6 +20,14 @@ const projects = [
     link: "https://abafoteq.com/",
     image: "/Screenshot 2026-01-15 011041.png",
   },
+  {
+    title: "Professional Portfolio Website",
+    description:
+      "Modern, responsive portfolio website built with Next.js and TypeScript. Features smooth animations, dark mode support, and optimized performance. Showcases projects, skills, and professional experience with an elegant, accessible design.",
+    technologies: ["Next.js", "TypeScript", "React", "Tailwind CSS", "Vercel"],
+    github: "https://github.com/MuhammadChoudhry1/protofolio",
+    image: "/Screenshot 2026-01-15 012325.png",
+  },
 ]
 
 export function ProjectsSection() {
