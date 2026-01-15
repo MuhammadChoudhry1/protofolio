@@ -4,6 +4,15 @@ const experiences = [
   {
     role: "Customer Service Advisor",
     company: "BT Group",
+    period: "Aug 2025 – Present",
+    location: "Belfast",
+    description:
+      "Resolved complex billing and account issues, including bereavement support. Used internal systems (Cloud 9, Back Office) to manage and track customer inquiries efficiently.",
+    technologies: ["Cloud 9", "Back Office", "Customer Support", "Problem Solving"],
+  },
+  {
+    role: "Customer Service Advisor",
+    company: "BT Group",
     period: "Jul 2024 – Feb 2025",
     location: "Belfast",
     description:

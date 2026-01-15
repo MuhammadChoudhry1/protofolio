@@ -17,17 +17,13 @@ export function HeroSection() {
 
       <div className="container mx-auto max-w-5xl relative z-10">
         <div className="space-y-8 text-center animate-in fade-in slide-in-from-bottom-4 duration-1000">
-          <div className="inline-flex items-center justify-center w-20 h-20 rounded-3xl bg-gradient-to-br from-primary/20 to-accent/20 border-2 border-primary/30 mb-4 shadow-lg shadow-primary/20 animate-in zoom-in duration-500">
-            <Code2 className="w-10 h-10 text-primary" />
-          </div>
-
           <h1 className="text-6xl sm:text-7xl lg:text-8xl font-bold tracking-tight text-balance">
             Muhammad <span className="bg-gradient-to-r from-primary via-accent to-secondary bg-clip-text text-transparent">Choudhry</span>
           </h1>
           <p className="text-2xl sm:text-3xl font-medium text-foreground/90 tracking-wide">Computer Science Graduate</p>
           <p className="text-lg sm:text-xl text-muted-foreground max-w-2xl mx-auto leading-relaxed">
-            Passionate about software development, data analysis, and full-stack web applications with nearly five years
-            of hands-on programming experience.
+            Passionate about software development, data analysis, and full-stack web applications with strong programming
+            experience gained through academic studies.
           </p>
 
           <div className="flex items-center justify-center gap-4 pt-6">

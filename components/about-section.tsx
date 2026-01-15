@@ -16,7 +16,7 @@ export function AboutSection() {
           <p className="text-xl text-muted-foreground">Get to know me better</p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-16">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-16">
           <Card className="p-8 hover:shadow-2xl hover:shadow-primary/10 transition-all duration-300 border-l-4 border-l-primary group hover:-translate-y-1 bg-gradient-to-br from-card to-card/50">
             <div className="w-14 h-14 rounded-2xl bg-primary/10 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
               <GraduationCap className="h-7 w-7 text-primary" />
@@ -33,17 +33,7 @@ export function AboutSection() {
             </div>
             <h3 className="text-xl font-semibold mb-3">Development</h3>
             <p className="text-muted-foreground leading-relaxed">
-              Nearly 5 years of programming experience with Java, Python, SQL, and modern web technologies
-            </p>
-          </Card>
-
-          <Card className="p-8 hover:shadow-2xl hover:shadow-accent/10 transition-all duration-300 border-l-4 border-l-accent group hover:-translate-y-1 bg-gradient-to-br from-card to-card/50">
-            <div className="w-14 h-14 rounded-2xl bg-accent/10 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
-              <Award className="h-7 w-7 text-accent" />
-            </div>
-            <h3 className="text-xl font-semibold mb-3">Certification</h3>
-            <p className="text-muted-foreground leading-relaxed">
-              Uptrail Data Analyst Internship with expertise in EDA, SQL, Tableau, and AutoML
+              Strong programming experience with Java, Python, SQL, and modern web technologies gained through academic studies
             </p>
           </Card>
         </div>
@@ -51,7 +41,7 @@ export function AboutSection() {
         <div className="space-y-6 text-lg leading-relaxed text-muted-foreground max-w-4xl">
           <p>
             I'm a recent Computer Science graduate passionate about software development, data analysis, and full-stack
-            web applications. With nearly five years of hands-on programming experience, I bring a strong foundation in
+            web applications. Through my academic career at Ulster University and Belfast Metropolitan College, I bring a strong foundation in
             Java, Python, SQL, and web technologies to every project.
           </p>
           <p>

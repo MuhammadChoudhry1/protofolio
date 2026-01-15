@@ -11,6 +11,9 @@ export const metadata: Metadata = {
   title: "Muhammad Choudhry - Computer Science Graduate",
   description:
     "Portfolio of Muhammad Choudhry, a passionate Computer Science graduate specializing in full-stack development, data analysis, and modern web technologies.",
+  icons: {
+    icon: "/ChatGPT Image Jan 14, 2026, 11_56_56 PM.png",
+  },
 }
 
 export default function RootLayout({

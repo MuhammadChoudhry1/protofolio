@@ -32,8 +32,9 @@ export function Navigation() {
     >
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
-          <a href="#" className="text-xl font-bold text-foreground hover:text-primary transition-all hover:scale-110 font-mono">
-            {"<MC"}
+          {/* Logo */}
+          <a href="#" className="flex items-center hover:opacity-80 transition-opacity">
+            <img src="/logo.png" alt="Logo" className="h-10 w-auto" />
           </a>
 
           {/* Desktop Navigation */}
