@@ -56,7 +56,7 @@ export function ContactSection() {
                 <MapPin className="h-5 w-5 text-primary mt-0.5" />
                 <div>
                   <p className="text-sm text-muted-foreground">Location</p>
-                  <p className="text-foreground">24 Elm Corner, Dunmurry, Belfast BT17 9PY</p>
+                  <p className="text-foreground">Belfast, United Kingdom</p>
                 </div>
               </div>
             </div>

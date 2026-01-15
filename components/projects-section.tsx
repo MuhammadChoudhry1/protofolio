@@ -13,6 +13,14 @@ const projects = [
     image: "/image.png",
   },
   {
+    title: "Color Palette Generator",
+    description:
+      "Advanced color palette generator with glassmorphism design, built entirely with Python's standard library. Features HSV-based color scheme generation, interactive swatches with clipboard integration, custom gradients, and animated notifications. Generates complementary, analogous, triadic, split complementary, and monochromatic color schemes with real-time preview.",
+    technologies: ["Python", "Tkinter", "Colorsys", "HSV Color Manipulation", "GUI Design"],
+    github: "https://github.com/MuhammadChoudhry1/colour-palette-generator",
+    image: "/Screenshot 2026-01-15 085222.png",
+  },
+  {
     title: "Abafoteq Corporate Website",
     description:
       "Modern, responsive corporate website for Abafoteq Ltd to showcase services, projects, and company profile. Optimized for performance, usability, and cross-device compatibility.",
@@ -34,9 +42,10 @@ export function ProjectsSection() {
   return (
     <section id="projects" className="py-32 px-4 sm:px-6 lg:px-8 bg-background relative overflow-hidden">
       {/* Subtle background effects */}
-      <div className="absolute inset-0 bg-gradient-to-b from-muted/30 via-background to-muted/30" />
-      <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-primary/5 rounded-full blur-3xl" />
-      <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-secondary/5 rounded-full blur-3xl" />
+      <div className="absolute inset-0 bg-gradient-to-b from-muted/50 via-background to-muted/50" />
+      <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-primary/10 rounded-full blur-3xl" />
+      <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-secondary/10 rounded-full blur-3xl" />
+      <div className="absolute top-1/2 right-1/3 w-64 h-64 bg-accent/8 rounded-full blur-3xl" />
       
       <div className="container mx-auto max-w-6xl relative z-10">
         <div className="text-center mb-20">
