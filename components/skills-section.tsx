@@ -14,7 +14,7 @@ const skillCategories = [
   },
   {
     category: "Tools & Technologies",
-    skills: ["Git", "Azure", "Docker", "Power BI", "Tableau", "AutoML"],
+    skills: ["Git", "Azure", "Docker", "Power BI"],
     color: "border-l-accent",
   },
   {
