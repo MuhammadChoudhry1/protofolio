@@ -28,10 +28,7 @@ export function HeroSection() {
 
           <div className="flex items-center justify-center gap-4 pt-6">
             <Button variant="default" size="lg" className="h-12 px-8 text-base shadow-lg shadow-primary/30 hover:shadow-xl hover:shadow-primary/40 hover:scale-105 transition-all" asChild>
-              <a href="#contact">Get In Touch</a>
-            </Button>
-            <Button variant="outline" size="lg" className="h-12 px-8 text-base bg-transparent border-2 hover:bg-primary/5 hover:scale-105 transition-all" asChild>
-              <a href="#projects">View Projects</a>
+              <a href="#contact">Contact</a>
             </Button>
           </div>
 

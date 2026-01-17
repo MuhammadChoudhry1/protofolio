@@ -1,7 +1,18 @@
+"use client"
+
 import { Card } from "@/components/ui/card"
-import { Button } from "@/components/ui/button"
 import { Badge } from "@/components/ui/badge"
+import { Button } from "@/components/ui/button"
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from "@/components/ui/carousel"
 import { ExternalLink, Github } from "lucide-react"
+import Autoplay from "embla-carousel-autoplay"
+import { useRef } from "react"
 
 const projects = [
   {
@@ -39,6 +50,10 @@ const projects = [
 ]
 
 export function ProjectsSection() {
+  const plugin = useRef(
+    Autoplay({ delay: 4000, stopOnInteraction: true })
+  )
+
   return (
     <section id="projects" className="py-32 px-4 sm:px-6 lg:px-8 bg-background relative overflow-hidden">
       {/* Subtle background effects */}
@@ -53,52 +68,64 @@ export function ProjectsSection() {
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">A showcase of my technical work and professional contributions</p>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 max-w-5xl mx-auto">
-          {projects.map((project, index) => (
-            <Card
-              key={index}
-              className="overflow-hidden group bg-card border border-border hover:border-primary/30 transition-all duration-300 hover:shadow-xl"
-            >
-              <div className="relative overflow-hidden bg-muted/50">
-                <img
-                  src={project.image || "/placeholder.svg"}
-                  alt={project.title}
-                  className="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-105"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-background/80 via-background/20 to-transparent" />
-              </div>
-              <div className="p-8">
-                <h3 className="text-2xl font-bold mb-3 tracking-tight">{project.title}</h3>
-                <p className="text-muted-foreground mb-6 leading-relaxed text-sm">{project.description}</p>
-                <div className="flex flex-wrap gap-2 mb-8">
-                  {project.technologies.map((tech) => (
-                    <Badge key={tech} variant="outline" className="px-3 py-1 text-xs font-medium border-muted-foreground/20">
-                      {tech}
-                    </Badge>
-                  ))}
-                </div>
-                <div className="flex gap-3">
-                  {"github" in project && (
-                    <Button variant="default" size="default" className="flex-1 font-medium" asChild>
-                      <a href={project.github} target="_blank" rel="noopener noreferrer">
-                        <Github className="h-4 w-4 mr-2" />
-                        View Code
-                      </a>
-                    </Button>
-                  )}
-                  {"link" in project && (
-                    <Button variant="outline" size="default" className="flex-1 font-medium" asChild>
-                      <a href={project.link} target="_blank" rel="noopener noreferrer">
-                        <ExternalLink className="h-4 w-4 mr-2" />
-                        Live Site
-                      </a>
-                    </Button>
-                  )}
-                </div>
-              </div>
-            </Card>
-          ))}
-        </div>
+        <Carousel
+          plugins={[plugin.current]}
+          className="w-full max-w-5xl mx-auto"
+          onMouseEnter={plugin.current.stop}
+          onMouseLeave={plugin.current.reset}
+          opts={{
+            align: "start",
+            loop: true,
+          }}
+        >
+          <CarouselContent>
+            {projects.map((project, index) => (
+              <CarouselItem key={index} className="md:basis-1/2 lg:basis-1/2">
+                <Card className="overflow-hidden group bg-card border border-border hover:border-primary/30 transition-all duration-300 hover:shadow-xl h-full">
+                  <div className="relative overflow-hidden bg-muted/50">
+                    <img
+                      src={project.image || "/placeholder.svg"}
+                      alt={project.title}
+                      className="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-105"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-background/80 via-background/20 to-transparent" />
+                  </div>
+                  <div className="p-8">
+                    <h3 className="text-2xl font-bold mb-3 tracking-tight">{project.title}</h3>
+                    <p className="text-muted-foreground mb-6 leading-relaxed text-sm">{project.description}</p>
+                    <div className="flex flex-wrap gap-2 mb-6">
+                      {project.technologies.map((tech) => (
+                        <Badge key={tech} variant="outline" className="px-3 py-1 text-xs font-medium border-muted-foreground/20">
+                          {tech}
+                        </Badge>
+                      ))}
+                    </div>
+                    <div className="flex gap-3">
+                      {project.github && (
+                        <Button variant="outline" size="sm" asChild className="hover:bg-primary hover:text-primary-foreground hover:border-primary">
+                          <a href={project.github} target="_blank" rel="noopener noreferrer" className="gap-2">
+                            <Github className="w-4 h-4" />
+                            View Code
+                          </a>
+                        </Button>
+                      )}
+                      {project.link && (
+                        <Button variant="default" size="sm" asChild>
+                          <a href={project.link} target="_blank" rel="noopener noreferrer" className="gap-2">
+                            <ExternalLink className="w-4 h-4" />
+                            Live Site
+                          </a>
+                        </Button>
+                      )}
+                    </div>
+                  </div>
+                </Card>
+              </CarouselItem>
+            ))}
+          </CarouselContent>
+          <CarouselPrevious className="hidden md:flex" />
+          <CarouselNext className="hidden md:flex" />
+        </Carousel>
       </div>
     </section>
   )
